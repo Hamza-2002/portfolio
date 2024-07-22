@@ -51,3 +51,11 @@
 //             proxy_cache_bypass $http_upgrade;
 //     }
 // }
+
+const humberguer_menu = document.querySelector(".humberger-menu")
+const list = document.querySelector(".nav-ul")
+
+humberguer_menu.addEventListener("click" , () =>{
+    list.classList.toggle("menu")
+    
+})

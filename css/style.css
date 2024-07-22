@@ -145,6 +145,13 @@ section .container .main-heading{
   background-color: #fab85b75;
 
 }
+.header-section .humberger-menu{
+  font-size: 2.5rem;
+  padding: 2rem;
+  display: none;
+  cursor: pointer;
+}
+
 
 .header-section .container {
   padding: 1.8rem 0;
@@ -176,6 +183,35 @@ section .container .main-heading{
 
 
 
+@media (max-width:768px) {
+  .header-section .humberger-menu{
+    
+      display: block;
+  }
+  .header-section .container .navbar ul{
+    flex-direction: column;
+    align-items: center;
+    display: none;
+ 
+    &li:hover
+   
+{
+      width: 100%;
+      background-color: black;
+      text-align: center;
+      
+      & a{
+        color: var(--background-color);
+      }
+    }
+    
+  }
+  .header-section .container .navbar  ul.menu{
+    display: flex;
+   
+  }
+
+}
 
 /***** End navbar section *****/
 
@@ -194,6 +230,7 @@ section .container .main-heading{
 
 .hero-section .hero-image img{
   width: 100%;
+ 
   
 }
 .hero-section .hero-content .hero-heading{
@@ -360,7 +397,7 @@ display: inline-block;
 
 /***** Section projects *****/
 .project-section .grid{
-  gap: 3rem;
+  gap: 2rem;
   justify-content: center;
 }
 
@@ -371,13 +408,20 @@ display: inline-block;
   justify-content: center;
   flex-direction: column;
   & img{
-    width: 100%;
+    width: 150px;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
     transition: all .3s linear;
     -webkit-transition: all .3s linear;
     -moz-transition: all .3s linear;
     -ms-transition: all .3s linear;
     -o-transition: all .3s linear;
-    &:hover{
+    &:hover
+  
+{
       scale: 1.1;
     }
   }
@@ -390,7 +434,12 @@ display: inline-block;
   &:hover{
     box-shadow: var(--btn-box-shadow);
     cursor: pointer;
-  }
+    border-radius: 3rem;
+    -webkit-border-radius: 3rem;
+    -moz-border-radius: 3rem;
+    -ms-border-radius: 3rem;
+    -o-border-radius: 3rem;
+}
 }
 /***** End Section projects *****/
 
@@ -462,4 +511,19 @@ display: inline-block;
   }
 
 }
+
+@media (max-width:768px){
+  .footer .grid-five--cols{
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+  }
+}
+@media (max-width:468px){
+  .footer .grid-five--cols{
+    grid-template-columns: repeat(1, 1fr);
+    
+  }
+}
+
+
 /***** End footer *****/
